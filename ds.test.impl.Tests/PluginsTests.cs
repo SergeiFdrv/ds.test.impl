@@ -60,5 +60,27 @@ namespace ds.test.impl.Tests
             // Assert
             Assert.Equal(3, res);
         }
+
+        [Fact]
+        public void RATAreaHypotenuse()
+        {
+            // Arrange
+            IPlugin plugin = new Plugins().GetPlugin("90TrnglAreaHypotenuse");
+            // Act
+            int res = plugin.Run(8, 4);
+            // Assert
+            Assert.Equal(13, res);
+        }
+
+        [Fact]
+        public void RATAreaLegs()
+        {
+            // Arrange
+            IPlugin plugin = new Plugins().GetPlugin("90TrnglAreaLegs");
+            // Act
+            int res = plugin.Run(8, 4);
+            // Assert
+            Assert.Equal(16, res);
+        }
     }
 }

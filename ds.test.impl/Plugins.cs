@@ -18,14 +18,16 @@ namespace ds.test.impl
             AppDomain.CurrentDomain.GetAssemblies()
                 .SelectMany(a => a.GetTypes())
                 .Where(t => t.IsClass && !t.IsAbstract
-                && t.Namespace == "ds.test.impl"
+                &&
+                (t.Namespace == "ds.test.impl.Ops" ||
+                t.Namespace == "ds.test.impl.Ops.geometry")
                 && t.GetProperty("PluginName") != null);
 
         /// <summary>
-        /// Находит плагин по имени
+        /// Находит плагин по имени. Пример обращения:
         /// <code>
-        /// PluginFactory P = new Plugins();
-        /// IPlugin p = P.GetPlugin("PluginName");
+        /// PluginFactory pluginFactory = new Plugins();<br/>
+        /// IPlugin p = pluginFactory.GetPlugin("PluginName");
         /// </code>
         /// </summary>
         public IPlugin GetPlugin(string pluginName)

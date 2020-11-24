@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ds.test.impl
+namespace ds.test.impl.Ops
 {
     /// <summary>
     /// Умножение

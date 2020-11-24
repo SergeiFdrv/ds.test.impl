@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
 
-namespace ds.test.impl
+namespace ds.test.impl.Ops
 {
     /// <summary>
     /// Класс геометрических операций

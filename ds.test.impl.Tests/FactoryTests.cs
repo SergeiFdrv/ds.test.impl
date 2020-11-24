@@ -29,10 +29,21 @@ namespace ds.test.impl.Tests
                 "Divide",
                 "Multiply",
                 "Remainder",
-                "90TrnglAreaHypothenuse",
-                "90TrnglAreaLegs",
-                "Subtract"
+                "Subtract",
+                "90TrnglAreaHypotenuse",
+                "90TrnglAreaLegs"
             }, res);
+        }
+
+        [Fact]
+        public void MyTest()
+        {
+            // Arrange
+            string ns = "ds.test.impl.Ops";
+            // Act
+            bool c = ns.StartsWith("ds.test.impl.Ops");
+            // Assert
+            Assert.True(c);
         }
     }
 }
